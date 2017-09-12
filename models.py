@@ -59,7 +59,7 @@ class Tweet(Base):
             t.nlp = json.dumps(nlp_response)
 
             if not locations:
-                print "skipping no locations on text:", t.text
+                print "skipping no locations on text:", t.text.encode('utf-8')
                 t.error_description = "NLP:no-location-on-text"
                 t.processed = True
                 session.commit()
