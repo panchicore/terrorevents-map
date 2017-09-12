@@ -5,3 +5,4 @@ TWITTER_CONSUMER_SECRET = "!"
 TWITTER_ACCESS_TOKEN = "!"
 TWITTER_ACCESS_TOKEN_SECRET = "!"
 MAPBOX_TOKEN = "!"
+STANDFORD_NLP_API='http://localhost:9000/?properties={"annotators":"tokenize,ssplit,pos,ner","outputFormat":"json"}'

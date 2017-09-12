@@ -1,8 +1,13 @@
 import requests
+from config import STANDFORD_NLP_API
 
 def get_locations(text):
-    res = requests.post('http://10.65.48.37:9000/?properties={"annotators":"tokenize,ssplit,pos,ner","outputFormat":"json"}',
-                        data=text)
+    """
+
+    :param text:
+    :return:
+    """
+    res = requests.post(STANDFORD_NLP_API, data=text)
 
     res = res.json()
 
@@ -13,4 +18,4 @@ def get_locations(text):
             if token['ner'] == 'LOCATION':
                 locations.append(token['word'])
     
-    return locations
+    return res, locations

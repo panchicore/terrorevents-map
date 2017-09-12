@@ -1,8 +1,11 @@
-import tweepy
-import nlp_client
-from config import TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET, TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET
+import json
 
-def get_twitts():
+import tweepy
+from config import TWITTER_ACCESS_TOKEN, TWITTER_ACCESS_TOKEN_SECRET, TWITTER_CONSUMER_KEY, TWITTER_CONSUMER_SECRET
+from models import Tweet
+
+
+def get_tweets():
     """
 
     :return:
@@ -15,15 +18,19 @@ def get_twitts():
     return tweets
 
 
+def save_tweets():
+    """
 
-
-tweets = get_twitts()
-for tweet in tweets:
-    # print tweet.created_at, tweet.text
-    text = tweet.text.replace("#", "")
-
-    locations = nlp_client.get_locations(text.encode('utf-8'))
-    if locations:
-        print text
-        print locations
-        print "-"
+    :return:
+    """
+    tweets = get_tweets()
+    for tweet in tweets:
+        t = Tweet()
+        t.id = tweet.id
+        if not t.exists():
+            t.date = tweet.created_at
+            t.text = tweet.text
+            t.user = tweet.user.screen_name
+            t.raw_tweet = json.dumps(tweet._json)
+            t.save()
+            print "saving", t.id
