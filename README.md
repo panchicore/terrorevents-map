@@ -17,5 +17,6 @@ Fullscreen: http://bl.ocks.org/d/01089c9ebea7e3dbfd038682ca5b7b72
 - ~~Extract time (tweet date)~~
 - ~~Extract space (locations mentioned in the tweet)~~
 - Extract perpetrators (terrorist entities mentioned in the tweet)
+- Perform sentimental analisys: index of terror.
 
 #### Please fork and contribute.
