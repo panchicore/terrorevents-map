@@ -3,6 +3,8 @@ Extract info from internet and load it on a map. Start with @TerrorEvents.
 
 Result from latest updates are updated and mapped in a hourly basis here: https://gist.github.com/panchicore/6b000c24a41fc8533b16e0553667ca61
 
+Fullscreen: http://bl.ocks.org/d/01089c9ebea7e3dbfd038682ca5b7b72
+
 
 ## Pipeline
 1. Get tweets
