@@ -1,2 +1,4 @@
-requests
-geojson
+requests==2.18.4
+geojson==2.1.0
+tweepy==3.5.0git status
+SQLAlchemy==1.1.14
