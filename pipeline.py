@@ -6,6 +6,7 @@ import github_client
 import twitter_client
 from models import Tweet
 
+print datetime.datetime.today()
 # download tweets and save to sqllite
 twitter_client.save_tweets()
 
@@ -20,12 +21,12 @@ geojson_today = Tweet().get_geojson_since_days(days=1)
 gist = {
   "description": "TerrorEvents tweet map. Latest update {0} [UTC+01:00], Fork it on https://github.com/panchicore/terrorevents-map".format(datetime.datetime.today().isoformat()),
   "files": {
-    "today.geo.json": {
-      "filename": "today.geo.json",
+    "today.geojson": {
+      "filename": "today.geojson",
       "content": json.dumps(geojson_today)
     },
-    "7days.geo.json": {
-      "filename": "7days.geo.json",
+    "7days.geojson": {
+      "filename": "7days.geojson",
       "content": json.dumps(geojson_days)
     },
 

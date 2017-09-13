@@ -66,7 +66,7 @@ class Tweet(Base):
                 continue
 
             locations_query = ', '.join(locations)
-            geocode = mapbox_client.geocode(locations_query)
+            geocode = mapbox_client.geocode(locations_query.encode('utf-8'))
             t.geocode = json.dumps(geocode)
 
             if not geocode:
