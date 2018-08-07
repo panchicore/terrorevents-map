@@ -18,5 +18,6 @@ Fullscreen: http://bl.ocks.org/d/01089c9ebea7e3dbfd038682ca5b7b72
 - ~~Extract space (locations mentioned in the tweet)~~
 - Extract perpetrators (terrorist entities mentioned in the tweet)
 - Perform sentimental analisys: index of terror.
+- Change mapbox geocoding for free geonames geo-search powered by elasticsearch.
 
 #### Please fork and contribute.
