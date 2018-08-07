@@ -19,7 +19,9 @@ geojson_days = Tweet().get_geojson_since_days(days=7)
 geojson_today = Tweet().get_geojson_since_days(days=1)
 
 gist = {
-  "description": "TerrorEvents tweet map. Latest update {0} [UTC+01:00], Fork it on https://github.com/panchicore/terrorevents-map".format(datetime.datetime.today().isoformat()),
+  "description": "TerrorEvents tweet map. Latest update {0} [UTC+01:00], Fork it on https://github.com/panchicore/terrorevents-map".format(
+    datetime.datetime.today().isoformat()
+  ),
   "files": {
     "today.geojson": {
       "filename": "today.geojson",
