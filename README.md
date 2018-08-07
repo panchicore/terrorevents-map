@@ -16,7 +16,7 @@ Fullscreen: http://bl.ocks.org/d/01089c9ebea7e3dbfd038682ca5b7b72
 # TODO
 - ~~Extract time (tweet date)~~
 - ~~Extract space (locations mentioned in the tweet)~~
-- Extract perpetrators (terrorist entities mentioned in the tweet)
+- Train nlp: Extract event types and perpetrators (terrorist entities like islamic state or incident types like suicide attack, mentioned in the tweet)
 - Perform sentimental analisys: index of terror.
 - Change mapbox geocoding for free geonames geo-search powered by elasticsearch.
 
